@@ -1,0 +1,47 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+                xmlns:p="http://primefaces.org/ui"
+                xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+                template="resources/template.xhtml">
+    <ui:define name="title">
+        <title>Registre-se</title>
+    </ui:define>
+
+    <ui:define name="body">
+        <div class="grid">
+            <div class="col-12">
+                <div class="col-12 md:col-12 sm:col-12">
+                    <p:inputText id="nome"
+                                 value="#{registroBean.novoRegistro.nome}"
+                                 required="true"
+                                 a:autofocus="true"
+                                 requiredMessage="Nome não preenchido."
+                                 placeholder="Nome"/>
+                </div>
+
+                <div class="col-12 md:col-12 sm:col-12">
+                    <p:inputText id="email"
+                                 value="#{registroBean.novoRegistro.email}"
+                                 required="true"
+                                 a:autofocus="true"
+                                 requiredMessage="E-mail não preenchido."
+                                 placeholder="E-mail"/>
+                </div>
+
+                <div class="col-12 md:col-12 sm:col-12">
+                    <p:password id="senha"
+                                value="#{registroBean.novoRegistro.senha}"
+                                required="true"
+                                requiredMessage="Senha não preenchida."
+                                placeholder="Senha"/>
+                </div>
+
+                <div class="col-12 md:col-12 sm:col-12">
+                    <p:commandButton id="registrarNovoUsuario"
+                                     action="#{registroBean.registrarNovoUsuario()}"
+                                     value="CRIAR"/>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+</ui:composition>

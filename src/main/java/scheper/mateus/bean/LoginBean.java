@@ -13,6 +13,7 @@ import java.io.Serializable;
 @ViewScoped
 public class LoginBean implements Serializable {
 
+    
     @Serial
     private static final long serialVersionUID = 8606272551167403647L;
 

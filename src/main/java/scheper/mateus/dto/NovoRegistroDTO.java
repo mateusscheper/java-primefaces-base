@@ -10,6 +10,7 @@ import java.io.Serializable;
 @Setter
 public class NovoRegistroDTO implements Serializable {
 
+    
     @Serial
     private static final long serialVersionUID = 505864841350030607L;
 

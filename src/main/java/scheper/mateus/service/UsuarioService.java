@@ -10,6 +10,7 @@ import java.io.Serializable;
 
 public class UsuarioService implements Serializable {
 
+    
     @Serial
     private static final long serialVersionUID = -899026103031493772L;
 

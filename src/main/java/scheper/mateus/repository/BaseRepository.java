@@ -9,6 +9,7 @@ import java.io.Serializable;
 @ApplicationScoped
 public class BaseRepository implements Serializable {
 
+    
     @Serial
     private static final long serialVersionUID = -2177241904083852057L;
 

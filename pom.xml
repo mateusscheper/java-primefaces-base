@@ -11,13 +11,34 @@
     <version>1.0</version>
 
     <properties>
+        <java.version>21</java.version>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.target>1.8</maven.compiler.target>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <junit.version>5.8.2</junit.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>jakarta.platform</groupId>
+            <artifactId>jakarta.jakartaee-api</artifactId>
+            <version>8.0.0</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.wildfly</groupId>
+            <artifactId>wildfly-ejb3</artifactId>
+            <version>26.1.0.Final</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.wildfly.security</groupId>
+            <artifactId>wildfly-elytron</artifactId>
+            <scope>provided</scope>
+            <version>1.20.4.Final</version>
+        </dependency>
+
         <dependency>
             <groupId>org.primefaces</groupId>
             <artifactId>primefaces</artifactId>
@@ -59,7 +80,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.24</version>
+            <version>1.18.34</version>
             <scope>provided</scope>
         </dependency>
 
@@ -80,20 +101,6 @@
             <artifactId>omnifaces</artifactId>
             <version>3.13.3</version>
         </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-api</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter-engine</artifactId>
-            <version>${junit.version}</version>
-            <scope>test</scope>
-        </dependency>
     </dependencies>
 
     <build>
@@ -104,8 +111,8 @@
                 <version>3.10.1</version>
                 <configuration>
                     <compilerArgument>-XDignore.symbol.file</compilerArgument>
-                    <source>18</source>
-                    <target>18</target>
+                    <source>21</source>
+                    <target>21</target>
                 </configuration>
             </plugin>
 

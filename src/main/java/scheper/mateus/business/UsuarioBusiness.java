@@ -1,6 +1,5 @@
 package scheper.mateus.business;
 
-import org.apache.commons.lang3.StringUtils;
 import scheper.mateus.dto.NovoRegistroDTO;
 import scheper.mateus.entity.Usuario;
 import scheper.mateus.exception.BusinessException;

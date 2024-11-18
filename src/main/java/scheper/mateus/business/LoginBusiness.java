@@ -14,20 +14,22 @@ import javax.annotation.PostConstruct;
 
 public class LoginBusiness {
 
+    private static final String URL_HOME = "url.home";
+
     Subject user;
 
     @PostConstruct
     public void init() {
         user = SecurityUtils.getSubject();
         if (user.isAuthenticated())
-            UrlUtils.redirect("url.home");
+            UrlUtils.redirect(URL_HOME);
     }
 
     public LoginDTO login(LoginDTO loginDto) {
         user = SecurityUtils.getSubject();
 
         if (user.isAuthenticated()) {
-            UrlUtils.redirect("url.home");
+            UrlUtils.redirect(URL_HOME);
             return loginDto;
         }
 
@@ -44,7 +46,7 @@ public class LoginBusiness {
             user.login(token);
 
             if (user.isAuthenticated())
-                UrlUtils.redirect("url.home");
+                UrlUtils.redirect(URL_HOME);
 
             return loginDto;
         } catch (LockedAccountException e) {

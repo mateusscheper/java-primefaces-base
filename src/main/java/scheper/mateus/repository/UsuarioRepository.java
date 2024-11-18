@@ -7,6 +7,7 @@ import java.io.Serial;
 
 public class UsuarioRepository extends BaseRepository {
 
+    
     @Serial
     private static final long serialVersionUID = 2359630155678280083L;
 

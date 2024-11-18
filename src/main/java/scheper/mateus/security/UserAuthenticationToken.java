@@ -13,6 +13,7 @@ import static scheper.mateus.dto.LoginDTO.SENHA;
 
 public class UserAuthenticationToken implements AuthenticationToken {
 
+    
     @Serial
     private static final long serialVersionUID = 1756334491268582481L;
 

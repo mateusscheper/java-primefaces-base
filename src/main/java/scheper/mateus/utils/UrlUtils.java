@@ -16,10 +16,8 @@ public class UrlUtils {
         throw new IllegalStateException("Utility class");
     }
 
-    public static final String PROJECT_ROOT_URL = "/" + UrlUtils.getProperty("project.name");
-
     public static String getUrl(String urlName) {
-        return PROJECT_ROOT_URL + UrlUtils.getProperty(urlName);
+        return UrlUtils.getProperty(urlName);
     }
 
     public static void redirect(String urlName) {
